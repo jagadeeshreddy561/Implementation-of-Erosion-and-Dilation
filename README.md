@@ -35,13 +35,19 @@ import matplotlib.pyplot as plt
 
 # Create the Text using cv2.putText
 text_image = np.zeros((100,440),dtype = 'uint8')
-font = cv2.FONT_HERSHEY_SIMPLEX = 3
-cv2.putText(text_image," Gowri",(5,70),font,2,(255),5,cv2.LINE_AA)
+font = cv2.FONT_HERSHEY_COMPLEX_SMALL
+cv2.putText(text_image," JAGADEESH",(5,70),font,2,(255),5,cv2.LINE_AA)
 plt.title("Original Image")
 plt.imshow(text_image,'magma')
 plt.axis('off')
 
 # Create the structuring element
+import cv2
+import numpy as np
+import matplotlib.pyplot as plt
+text_image = np.zeros((100,440),dtype = 'uint8')
+font = cv2.FONT_HERSHEY_COMPLEX_SMALL
+cv2.putText(text_image," JAGADEESH",(5,70),font,2,(255),5,cv2.LINE_AA)
 kernel = cv2.getStructuringElement(cv2.MORPH_CROSS,(7,7))
 
 # Erode the image
@@ -51,6 +57,13 @@ plt.imshow(image_erode,'magma')
 plt.axis('off')
 
 # Dilate the image
+import cv2
+import numpy as np
+import matplotlib.pyplot as plt
+text_image = np.zeros((100,440),dtype = 'uint8')
+font = cv2.FONT_HERSHEY_COMPLEX_SMALL
+cv2.putText(text_image," JAGADEESH",(5,70),font,2,(255),5,cv2.LINE_AA)
+kernel = cv2.getStructuringElement(cv2.MORPH_CROSS,(7,7))
 image_dilate = cv2.dilate(text_image,kernel)
 plt.title("Dilated Image")
 plt.imshow(image_dilate,'magma')
